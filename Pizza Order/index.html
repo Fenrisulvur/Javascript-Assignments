@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <audio controls id = "audio">
+            <source src="UhOh.mp3" type="audio/mpeg" loop="loop">
+             Your browser does not support the audio element.
+        </audio>
+        <button onclick=pauseAudio()>STOP AUDIO</button>
+        <div id = "orderform">
+        <h1>Paul's Pizza</h1>
+        <img src="Pizza.png">
+        <form method="" name = "pizzaForm">
+            Name:
+            <Input type="text" id="name"></Input> <br \>
+            Phone:
+            <Input type="text" id="phone"></Input> <br \>
+            Address:
+            <Input type="text" id="address"></Input> <br \>
+            <hr/>
+
+            <input type="checkbox" class ="toppings" name="cheese" value="excheese">Extra Cheese / $0.35</Input>
+            <input type="checkbox" class ="toppings" name="sausage" value="sausage">Sausage / $1</Input>
+            <input type="checkbox" class ="toppings" name="pepperoni" value="pepperoni">Pepperoni / $0.5</Input> <br \>
+            <input type="checkbox" class ="toppings" name="chicken" value="chicken">Chicken / $0.8</Input>
+            <input type="checkbox" class ="toppings" name="peppers" value="peppers">Peppers / $0.3</Input>
+            <input type="checkbox" class ="toppings" name="ham" value="ham">Ham / $0.75</Input> <br \>
+
+            <label for="ordersize">Choose your size:</label>
+            <select id="ordersize" name="ordersize">
+                <option value="small">Small / $8</option>
+                <option value="medium">Medium / $10</option>
+                <option value="large">Large / $12</option>
+                <option value="extra-large">Extra-large / $15</option>
+            </select>
+            <hr/>
+             <br/>
+             <input type="radio" id="delivery" name="size" value="delivery">
+             <label for="delivery">Delivery</label><br>
+             
+             <input type="radio" id="eat-in" name="size" value="eat-in" checked>
+             <label for="eat-in">Eat-in</label><br>
+             
+             <input type="radio" id="pickup" name="size" value="pickup">
+             <label for="pickup">Pickup</label><br>
+        </form>
+        <button id="order">Order Pizza</button>
+        <hr/>
+        <textarea name="orderData" id="orderData" onfocus="setbg('#e5fff3');" onblur="setbg('white')"></textarea>
+    </div>
+    </body>
+</html>

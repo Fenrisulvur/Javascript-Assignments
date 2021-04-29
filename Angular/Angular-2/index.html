@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+  <link rel="stylesheet" href="index.css">
+
+  <body>
+    <div ng-app="myApp" ng-controller="classCtrl as c">
+    <form id="orderform" ng-submit="calc()">
+
+
+      <h3>Select vehicle type:</h3>
+      <select ng-model="selectedType">
+        <option ng-repeat="x in carTypes" ng-value="{{x}}">{{x.Type}}</option>
+      </select>
+      <p>You selected: {{selectedType.Type}}: ${{selectedType.Price}}</p>
+
+
+      <h3>Select vehicle color:</h3>
+      <label> <input type="radio" ng-model="selectedColor" value="Black"> Black-${{carColorPrice['Black']}}</label>
+      <label> <input type="radio" ng-model="selectedColor" value="Red"> Red-${{carColorPrice['Red']}}  </label>
+      <label> <input type="radio" ng-model="selectedColor" value="Blue"> Blue-${{carColorPrice['Blue']}} </label>
+      <p>You selected: {{selectedColor}}</p>
+
+
+      <h3>Select vehicle door options:</h3>
+      <label> <input type="radio" ng-model="selectedDoor" value="2 Door"> 2 Door-${{carDoorPrice['2 Door']}}</label>
+      <label> <input type="radio" ng-model="selectedDoor" value="4 Door"> 4 Door-${{carDoorPrice['4 Door']}}  </label>
+      <p>You selected: {{selectedDoor}}</p>
+
+
+      <h3>Select vehicle engine:</h3>
+      <label>V6 ${{carEnginesPrice['V6']}}:
+      <input type="checkbox" ng-model="selectedEngine"
+             ng-true-value="'V6'">
+      </label>
+      <label>V8 ${{carEnginesPrice['V8']}}:
+      <input type="checkbox" ng-model="selectedEngine"
+             ng-true-value="'V8'">
+     </label>
+      <p>You selected: {{selectedEngine}}</p>
+
+
+
+
+      <input type="submit" id="submit2" value="Calculate"/>
+      <h3>Calculated price: ${{finalPrice}}</h3>
+      <p>Options Breakdown</p>
+      <textarea id="orderData"> </textarea>
+    </form>
+    </div>
+  </body>
+</html>

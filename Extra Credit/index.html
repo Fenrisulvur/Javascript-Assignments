@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Javascript</title>
+        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body {
+                font-family: "Lato", sans-serif
+            }
+            .mySlides {
+                display: none
+            }
+        </style>
+    </head>
+
+<body class="w3-content">
+    <h1>Assignment 3</h1>
+    <div class="w3-ul w3-border w3-white w3-text-grey" style="max-width:800px">
+        <form >
+            <fieldset>
+                <legend>What metals do you like?</legend>
+                <input type="checkbox" id="cBox1" class ="metalsCB" value="Gold" checked>Gold<br>
+                <input type="checkbox" id="cBox2" class ="metalsCB" value="Silver">Silver<br>
+                <input type="checkbox" id="cBox3" class ="metalsCB" value="Iron">Iron<br>
+                <input type="checkbox" id="cBox4" class ="metalsCB" value="Cobalt" checked>Cobalt<br>
+                <input type="checkbox" id="cBox5" class ="metalsCB" value="Copper">Copper<br>
+                <input type="checkbox" id="cBox6" class ="metalsCB" value="Tin">Tin<br>
+                <br>
+                <button type="button" id="checkSubmit" onclick="showCheck()">Submit</button>
+                <label id="cBoxSelectedLabel"></label>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

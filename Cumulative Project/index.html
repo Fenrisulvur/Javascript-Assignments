@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="hide-div" class="show">
+        <p class="section-head">Show/hide</p>
+        <p class="section-content">Shows/hides audio panel</p>
+        <p class="section-implements">--Implements: add/remove class + more/less + event listeners + on page load + p +
+            div </p>
+        <button id="controlsVisible">Hide controls</button>
+    </div>
+    <!-- Add/remove class + more/less + variable testing + target + sound + control + user input + output1-->
+    <div id="audio-div" class="show">
+        <hr />
+        <p class="section-head">Audio Controller</p>
+        <p class="section-content">Controller to modify and show info on embedded audio.</p>
+        <p class="section-implements">--Implements: variable testing + event target + sound + control + user input +
+            output1 + event listeners + on page load + p + div</p>
+        <audio id="audio">
+            <source src="UhOh.mp3" type="audio/mpeg" loop="loop">
+            Your browser does not support the audio element.
+        </audio>
+        <button onclick=toggleAudio()>TOGGLE AUDIO</button><br />
+        VOL:
+        <input id="volume" type="number" pattern="%d" max="1" min="0" step=".1" value=".5">
+        <p id="time"></p>
+    </div>
+
+    <div>
+        <hr />
+        <p class="section-head">Text manipulation</p>
+        <p class="section-content">Controller to modify sample text.</p>
+        <p class="section-implements">--Implements: variable testing + input + style modification </p>
+        <p id="sample">Sample text</p>
+        Color: <input id="color" type="color"><br />
+        Size: <input id="font" type="number" pattern="%d" min="2" step="1" value="20">
+    </div>
+
+    <div>
+        <hr />
+        <p class="section-head">Animations</p>
+        <p class="section-content">Fading and animations.</p>
+        <p class="section-implements">--Implements: animations + fade + speed control + user input </p>
+        <p class="animate-fade" id="anim">This is some more sample text</p><br />
+        Speed: <input id="speed" type="number" pattern="%d" min=".1" step=".1" value="4">
+    </div>
+
+    <div>
+        <hr />
+        <p class="section-head">Mouse Events</p>
+        <p class="section-content">Mouse event actions + keypresses + disconnecting and connecting events</p>
+        <p class="section-implements">--Implements: mouse + addeventlistener + removeeventlistener </p>
+        <p>Press + to magnify and - to unmagnify the below text</p>
+        <p id="eventPara">This is some more sample text</p><br />
+        <button id="hookToggle">Add/Remove events toggle</button><br />
+    </div>
+
+    <div>
+        <hr />
+        <p class="section-head">Image Manipulation</p>
+        <p class="section-content">Edit image opacity</p>
+        <p class="section-implements">--Implements: opacity </p>
+        <img id="image" src="Pizza.png"><br />
+        Opacity: <input id="opacity" type="number" pattern="%d" min="0" max="1" step=".1" value="1">
+    </div>
+
+    <div>
+        <hr />
+        <p class="section-head">Element Manipulation</p>
+        <p class="section-content">Transferring and appending children between lists</p>
+        <p class="section-implements">--Implements: appendchild appendfirst appendlast </p>
+        <p class="section-subhead">List 1 </p>
+        <ul id="ul-1">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <button id="transfer">Transfer all to List 2</button>
+        <button id="appendFirst">Append first item to List 2</button>
+        <button id="appendLast">Append last item to List 2</button>
+        <button id="add">Add new item</button>
+        <button id="delete">Delete oldest item </button>
+
+        <p class="section-subhead">List 2 </p>
+        <ul id="ul-2">
+
+        </ul>
+        <button id="transfer2">Transfer all to List 1</button>
+        <button id="appendFirst2">Append first item to List 1</button>
+        <button id="appendLast2">Append last item to List 1</button>
+
+    </div>
+
+    <div id="pizza form">
+        <hr />
+        <p class="section-head">Pizza Form</p>
+        <p class="section-content">Order form section to demonstrate various variables and functions</p>
+        <p class="section-implements">--Implements: user input + variable validation + output2 + output3 + arrays + checkboxes + radiobuttons + dropbox </p>
+        <button id="nested">Display nested pizza data</button>
+        <div id="orderform">
+            <form method="" name="pizzaForm">
+                Name:
+                <Input type="text" id="name" placeholder="John Doe"></Input> <p id="error-name" class= "errortext"></p> <br \>
+                Phone:
+                <Input type="text" id="phone" placeholder="555-555-5555"></Input> <p id="error-phone" class= "errortext"></p> <br \>
+                Address:
+                <Input type="text" id="address" placeholder="555 North Street, PA"></Input> <p id="error-addr" class= "errortext"></p> <br \>
+                <hr />
+
+                <input type="checkbox" class="toppings" name="cheese" value="excheese">Extra Cheese / $0.35</Input>
+                <input type="checkbox" class="toppings" name="sausage" value="sausage">Sausage / $1</Input>
+                <input type="checkbox" class="toppings" name="pepperoni" value="pepperoni">Pepperoni / $0.5</Input> <br\>
+                <input type="checkbox" class="toppings" name="chicken" value="chicken">Chicken / $0.8</Input>
+                <input type="checkbox" class="toppings" name="peppers" value="peppers">Peppers / $0.3</Input>
+                <input type="checkbox" class="toppings" name="ham" value="ham">Ham / $0.75</Input> <br \>
+
+                <label for="ordersize">Choose your size:</label>
+                <select id="ordersize" name="ordersize">
+                    <option value="small">Small / $8</option>
+                    <option value="medium">Medium / $10</option>
+                    <option value="large">Large / $12</option>
+                    <option value="extra-large">Extra-large / $15</option>
+                </select>
+                <hr />
+                <br />
+                <input type="radio" id="delivery" name="size" value="delivery">
+                <label for="delivery">Delivery</label><br>
+
+                <input type="radio" id="eat-in" name="size" value="eat-in" checked>
+                <label for="eat-in">Eat-in</label><br>
+
+                <input type="radio" id="pickup" name="size" value="pickup">
+                <label for="pickup">Pickup</label><br>
+            </form>
+            <button id="order">Order Pizza</button>
+            <hr />
+            <textarea name="orderData" id="orderData" onfocus="setbg('#e5fff3');" onblur="setbg('white')"></textarea>
+        </div>
+    </div>
+
+    <button id="btn" title="Go to top">Top</button>
+    </div>
+</body>
+
+</html>

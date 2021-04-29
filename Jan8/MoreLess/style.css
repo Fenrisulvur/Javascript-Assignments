@@ -1,0 +1,21 @@
+#extraText {
+    display: none;
+}
+
+#extraText:target {
+    display: block;
+}
+
+#extraText + ul.controls {
+    list-style-type: none;
+}
+
+#extraText + ul.controls .hide,
+#extraText:target + ul.controls .show {
+    display: none;
+}
+
+#extraText:target + ul.controls .hide,
+#extraText + ul.controls .show {
+    display: inline-block;
+}

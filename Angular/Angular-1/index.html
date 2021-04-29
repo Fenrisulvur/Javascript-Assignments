@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="controller.js"></script>
+
+  <body>
+    <div ng-app="myApp" ng-controller="classCtrl as c" ng-init="list=[1,2,3]">
+
+      <h1>List from $scope.classes</h1>
+      <ul>
+        <li ng-repeat="class in classes | orderBy: 'period'"><pre>Class: {{class.name}}</pre> <pre>Period: {{class.period}}</pre> <pre>Teacher: {{class.teacher}}</pre></li>
+      </ul>
+      
+      <h1>List from init</h1>
+      <ul>
+        <li ng-repeat="x in list">{{x}}</li>
+      </ul>
+
+      <h1>List from user input</h1>
+      <ul>
+        <li ng-repeat="item in userArray track by $index">{{item}}</li>
+      </ul>
+
+      <form ng-submit="addItem()">
+        <input type="text" ng-model="name" placeholder="Enter a food item" /> -
+        <input id="inpPrice" type="text" ng-model="price" placeholder="Enter the food item Price" />
+        <input type="submit" id="submit"/>
+        <pre>Concatination: {{userArray}}</pre>
+      </form>
+
+    <h1>The text box below says: {{inputBox}}</h1>
+    <input type="text" ng-model="inputBox"/>
+
+    <form ng-submit="addition()">
+      <h1>Click the button to add the three values below</h1>
+      <input type="text" ng-model="val1"/>
+      <input type="text" ng-model="val2"/>
+      <input type="text" ng-model="val3"/>
+      <input type="submit" id="submit2" value="Add"/>
+      <p>Result: {{result}}</p>
+    </form>
+    
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id = "orderform">
+        <h1>Paul's Pizza</h1>
+        <img src="Pizza.png">
+        <form method="" name = "pizzaForm">
+            Name:
+            <Input type="text" id="name"></Input> <br \>
+            Phone:
+            <Input type="text" id="phone"></Input> <br \>
+            Address:
+            <Input type="text" id="address"></Input> <br \>
+            <hr/>
+
+            <input type="checkbox" class ="toppings" name="cheese" value="excheese">Extra Cheese</Input>
+            <input type="checkbox" class ="toppings" name="sausage" value="sausage">Sausage</Input>
+            <input type="checkbox" class ="toppings" name="pepperoni" value="pepperoni">Pepperoni</Input> <br \>
+            <input type="checkbox" class ="toppings" name="chicken" value="chicken">Chicken</Input>
+            <input type="checkbox" class ="toppings" name="peppers" value="peppers">Peppers</Input>
+            <input type="checkbox" class ="toppings" name="ham" value="ham">Ham</Input> <br \>
+        
+            <input type="radio" id="small" name="size" value="small">
+            <label for="small">Small</label><br>
+            
+            <input type="radio" id="medium" name="size" value="medium" checked>
+            <label for="medium">Medium</label><br>
+            
+            <input type="radio" id="large" name="size" value="large">
+            <label for="large">Large</label><br>
+            
+            <input type="radio" id="extralarge" name="size" value="extra large">
+            <label for="extra large">Extra Large</label><br>
+
+            <hr/>
+            <label for="Order Options">Choose how to get your order:</label>
+            <select id="ordertype" name="ordertype">
+                <option value="eat in">Eat In</option>
+                <option value="pickup">Pickup</option>
+                <option value="delivery">Delivery</option>
+            </select> <br/>
+            
+        </form>
+        <button id="order">Order Pizza</button>
+    </div>
+    </body>
+</html>

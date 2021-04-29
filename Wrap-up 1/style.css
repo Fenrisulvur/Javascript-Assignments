@@ -1,0 +1,59 @@
+.one-1 {
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.one-2 {
+    background-color: darkred;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+}
+
+.two-1 {
+    background-color: cyan;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+
+.two-2 {
+    background-color: darkcyan;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
+.three-1 {
+    background-color: rgb(0, 235, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.three-2 {
+    background-color: rgb(3, 58, 1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+}
+
+.four-1 {
+    background-color: purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+}
+
+.four-2 {
+    background-color: darkviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+.five-1 {
+    background-color: khaki;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.five-2 {
+    background-color: darkkhaki;
+    font-family: fantasy;
+    font-size: 24px;
+}
